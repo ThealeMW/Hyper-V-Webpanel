@@ -19,5 +19,5 @@ Quick and dirty attempt at a Hyper-V connected webpanel using PHP&PowerShell
 - [x] Security surrounding execution of PowerShell scripts (They should never be placed in the web directory)
 - [x] Realtime monitoring (Currently using PowerShell to dump a json file)
 - [x] Custom ISO support
-- [x]. IP-Address output
+- [x] IP-Address output
 #### And so much more.
