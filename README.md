@@ -1,5 +1,6 @@
 # Hyper-V-Webpanel
-Quick and dirty attempt at a Hyper-V connected webpanel using PHP&PowerShell
+Quick and dirty attempt at a Hyper-V connected webpanel using PHP&PowerShell 
+<br> ![GitHub Repo stars](https://img.shields.io/github/stars/thealemw/Hyper-V-Webpanel?style=social) ![GitHub followers](https://img.shields.io/github/followers/thealemw?label=Follow&style=social)
 
 # Features:
 
