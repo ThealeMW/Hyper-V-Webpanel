@@ -6,6 +6,7 @@ Quick and dirty attempt at a Hyper-V connected webpanel using PHP&PowerShell
 1. Create Virtual machines using a sysprepped image of desired OS (VHDX file)
 1. Monitor Virtual Machines CPU/RAM/UPTIME
 1. Delete / Start / Stop Virtual Machines
+1. Based on bootstrap
 
 #### This was made as a quicky and dirty demo several years ago
 #### Therefor it should be obvious that you should never use this :)
