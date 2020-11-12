@@ -1,22 +1,22 @@
-$kagge = Get-VM | Select-Object VMName, State, MemoryAssigned, Uptime, CPUUsage, CreationTime, ProcessorCount, ComputerName
+$getstatus = Get-VM | Select-Object VMName, State, MemoryAssigned, Uptime, CPUUsage, CreationTime, ProcessorCount, ComputerName
 
-$fulgrogg = @()
+$cobject = @()
 
-foreach ($bärs in $kagge) {
+foreach ($status in $getstatus) {
 
-$fulgrogg += [PSCustomObject]@{    
-    Hostname = $bärs.VMName
-    State = $bärs.State
-    RAM = $bärs.MemoryAssigned / 1MB
-    Uptime = $bärs.Uptime | Select-Object Days, Hours, Minutes, Seconds
-    CPU = $bärs.CPUUsage
-    Created = $bärs.CreationTime
-    Cores = $bärs.ProcessorCount
-    DC = $bärs.ComputerName
+$cobject += [PSCustomObject]@{    
+    Hostname = $status.VMName
+    State = $status.State
+    RAM = $status.MemoryAssigned / 1MB
+    Uptime = $status.Uptime | Select-Object Days, Hours, Minutes, Seconds
+    CPU = $status.CPUUsage
+    Created = $status.CreationTime
+    Cores = $status.ProcessorCount
+    DC = $status.ComputerName
     }
-    if ( $bärs.State -eq "Running")
+    if ( $status.State -eq "Running")
 {
-    $fulgrogg | Sort-Object -Property state | ConvertTo-json | Out-File -FilePath C:\xampp\htdocs\inc\ps\api.php
+    $cobject | Sort-Object -Property state | ConvertTo-json | Out-File -FilePath C:\xampp\htdocs\inc\ps\api.php
 }
 
 }
